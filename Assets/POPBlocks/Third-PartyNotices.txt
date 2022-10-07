@@ -1,0 +1,25 @@
+POP Blast is governed by the Asset Store EULA; however, the following components are governed by the licenses indicated below:
+
+A. DOTween
+    - MIT license 
+    - License details available in http://dotween.demigiant.com/license.php
+
+B. TextMesh Pro asset 
+    - Asset Store EULA
+    - License details available here: https://unity3d.com/es/legal/as_terms
+
+C. Unity Reorderable List
+    - MIT license 
+    - License details available here: https://github.com/cfoulston/Unity-Reorderable-List/blob/master/LICENSE
+
+D. GameViewSizeHelper
+    - MIT license 
+    - License details available here: https://github.com/anchan828/unity-GameViewSizeHelper/LICENSE
+
+E. Fonts (POPBlocks/Fonts folder)
+    - SIL OPEN FONT LICENSE Version 1.1
+    - License details available here: https://www.1001fonts.com/fredoka-one-font.html#license
+
+E. Sounds (POPBlocks/Audio folder)
+    - Regular license
+    - License details available here: https://audiojungle.net/licenses/terms/regular

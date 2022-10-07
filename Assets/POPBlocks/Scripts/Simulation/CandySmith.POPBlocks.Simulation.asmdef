@@ -1,0 +1,26 @@
+{
+    "name": "CandySmith.POPBlocks.Simulation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c81be401fd8d04e1697be41173d26d51",
+        "GUID:a2125505c4e6fe74f9f639af80bc3dbd",
+        "GUID:40b44d41819601840840f0495c3f2480"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_GAME_SIMULATION"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.simulation.games",
+            "expression": "",
+            "define": "UNITY_GAME_SIMULATION"
+        }
+    ],
+    "noEngineReferences": false
+}

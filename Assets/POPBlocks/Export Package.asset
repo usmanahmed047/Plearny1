@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ec061b5ce3f6849bc6ee6497489ccb, type: 3}
+  m_Name: Export Package
+  m_EditorClassIdentifier: 
+  includeFolders: []
+  excludeFolders: []
+  includeFiles:
+  - Assets/POPBlocks/pause_button.prefab
+  excludeFiles: []
+  foldersToInclude: []
+  filesToInclude: []
+  foldersToExclude: []
+  filesToExclude: []
+  includeFoldersGUID: []
+  excludeFoldersGUID: []
+  includeFilesGUID:
+  - 606e6e56b82de77458e92bd92cc0f1f5
+  excludeFilesGUID: []
+  foldersToIncludeGUID: []
+  filesToIncludeGUID: []
+  foldersToExcludeGUID: []
+  filesToExcludeGUID: []
+  packageName: settings
+  targetDirectory: C:/Users/droba/Downloads
+  fileExistsCheck: 1
+  expandedList: 0
+  showIncludeFolderList: 1
+  showIncludeFileList: 1
+  showExcludeFolderList: 1
+  showExcludeFileList: 1
+  showList: 1
