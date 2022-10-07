@@ -8,7 +8,7 @@ namespace POPBlocks.MapScripts
     {
         private int _nextInd;
         private int _finishInd;
-        private Action _finishedAction;
+        [SerializeField] private Action _finishedAction;
 
         private SplineCurve _splineCurve;
         private float _splineT;
