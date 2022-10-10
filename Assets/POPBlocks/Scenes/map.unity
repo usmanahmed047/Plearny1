@@ -5116,22 +5116,51 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11475072, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
+--- !u!1 &1205689796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
+  m_PrefabInstance: {fileID: 1205689795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1205689797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
   m_PrefabInstance: {fileID: 1205689795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1205689799 stripped
+--- !u!114 &1205689798 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11415882, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
+  m_CorrespondingSourceObject: {fileID: 11464204, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
   m_PrefabInstance: {fileID: 1205689795}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1205689799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11415882, guid: b08b1744d4e29eb46a4e670ad7bf5c13, type: 3}
+  m_PrefabInstance: {fileID: 1205689795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205689796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9b0fa61277a2c4a91d6c852f56d18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1205689800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205689796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7c2bca50984f4ba1aab97dee5dc703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1205689798}
 --- !u!1001 &1217580877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8617,7 +8646,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13.6
+  orthographic size: 4.303125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8678,7 +8707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 2045760974}
   objectTransform: {fileID: 0}
-  currentAspectRatio: {x: 9, y: 16}
+  currentAspectRatio: {x: 16, y: 9}
   currentCameraRect:
     serializedVersion: 2
     x: 0
