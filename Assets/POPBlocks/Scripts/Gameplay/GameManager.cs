@@ -13,6 +13,7 @@
 
 using System;
 using System.Collections.Generic;
+using AdmobAds;
 using POPBlocks.MapScripts;
 using POPBlocks.Scripts.Boosts;
 using POPBlocks.Scripts.GameGUI;
@@ -37,6 +38,8 @@ namespace POPBlocks.Scripts
         public GUICounter coins;
         //lives GUI element
         public GUICounter lives;
+        //Cash Reward 
+        public int cash;
         //instance
         public static GameManager Instance;
         //boosts using in main scene and game scene
@@ -120,6 +123,7 @@ namespace POPBlocks.Scripts
         private void OpenMenuPlay(int number)
         {
             Debug.Log("open menu play");
+            AdsManager.Instance.ShowInterstitialAd();
             GameManager.Instance._mapProgressManager.CurrentLevel = number;
             openNextLevel = false;
             PopupManager.Instance.play1.Show();

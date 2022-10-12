@@ -12,10 +12,6 @@
 // // THE SOFTWARE.
 
 using System.Linq;
-#if UNITY_INAPP
-using POPBlocks.Scripts.Integrations;
-using UnityEngine.Purchasing;
-#endif
 using POPBlocks.Scripts.Scriptables;
 using UnityEngine;
 
@@ -43,27 +39,13 @@ namespace POPBlocks.Scripts.Popups
 
         private void OnEnable()
         {
-            #if UNITY_INAPP
-            UnityInAppsIntegration.OnPurchaseSucceed += OnPurchased;
-            #endif
+            
         }
 
         private void OnDisable()
         {
-#if UNITY_INAPP
-
-            UnityInAppsIntegration.OnPurchaseSucceed -= OnPurchased;
-#endif
 
         }
-
-#if UNITY_INAPP
-        void OnPurchased(PurchaseEventArgs args)
-        {
-            GameManager.Instance.coins.IncrementValue(shopSettings.shopItems.First(i => i.productID == args.purchasedProduct.definition.id).coins);
-            Hide();
-        }
-#endif
 
         public void StartRewarded()
         {

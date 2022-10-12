@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Plearny1
+  companyName: LemonStudio
+  productName: Plearny_PopBlocks_Android
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -155,7 +155,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.CandySmith.POPBlocks11
+    Android: com.LemonStudio.Plearny_PopBlocks_Android
     Standalone: com.CandySmith.POPBlocks
     iPhone: com.CandySmith.POPBlocks
   buildNumber:
@@ -164,8 +164,8 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 16
-  AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 29
+  AndroidMinSdkVersion: 28
+  AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -259,7 +259,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -777,15 +777,15 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 1
   scriptingDefineSymbols:
-    Android: EnableNotificationsAndroid
-    Standalone: 
+    Android: EnableNotificationsAndroid;ADMOB
+    Standalone: ADMOB
     WebGL: FACEBOOK
-    Windows Store Apps: UNITY_INAPP;UNITY_ADS
-    iPhone: EnableNotificationsIos
+    Windows Store Apps: UNITY_INAPP;UNITY_ADS;ADMOB
+    iPhone: EnableNotificationsIos;ADMOB
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
-    Android: 0
+    Android: 1
     Standalone: 0
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
@@ -861,10 +861,11 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Analytics: 1
-    Build: 1
-    Collab: 1
+    Build: 0
+    Collab: 0
     Game Performance: 0
-    Purchasing: 1
+    Legacy Analytics: 1
+    Purchasing: 0
     UDP: 0
     Unity Ads: 1
   luminIcon:
@@ -880,11 +881,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: e0ba2f0d-63e2-49b0-91cc-6225fc9d2a03
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: POPBlocks
-  organizationId: 
+  projectName: Plearny1 (1)
+  organizationId: unity_d72677c10e307f263b80
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

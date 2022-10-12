@@ -7,6 +7,7 @@ TagManager:
   - Item
   - FxTemporaire
   - AnimatedTarget
+  - Banner
   layers:
   - Default
   - TransparentFX

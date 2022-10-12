@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdmobAds;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -40,6 +41,7 @@ namespace POPBlocks.MapScripts
             if (IsGenerated) {
                 Reset ();
             }
+            AdsManager.Instance.ShowBannerAd(false);
         }
 
 

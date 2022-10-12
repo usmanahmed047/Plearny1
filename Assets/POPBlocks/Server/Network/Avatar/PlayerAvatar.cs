@@ -52,7 +52,7 @@ namespace POPBlocks.Server.Network
 
         public void ShowPicture()
         {
-            image.sprite = NetworkManager.profilePic;
+            //image.sprite = NetworkManager.profilePic;
             image.enabled = true;
         }
 

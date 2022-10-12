@@ -11,6 +11,7 @@
 // // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // // THE SOFTWARE.
 
+using AdmobAds;
 using POPBlocks.Scripts.Scriptables;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,9 +20,15 @@ namespace POPBlocks.Scripts.Popups
 {
     public class MainMenu : Popup
     {
-        
+        private void Start()
+        {
+            AdsManager.Instance.ShowBannerAd(true);
+        }
+
         public void StartGame()
         {
+            //if (MonetizationManager.Instance.IsAppOpenAdAvailable)
+            //MonetizationManager.Instance.ShowInterstitialAd();
             var gameSettings = Resources.Load<GameSettings>("Settings/GameSettings");
             switch (gameSettings.mapType)
             {
@@ -33,9 +40,10 @@ namespace POPBlocks.Scripts.Popups
                     SceneManager.LoadScene("grid");
                     break;
                 case MapTypes.ScrollingsMap:
-                    if(gameSettings.afterLevel >= GameManager.Instance._mapProgressManager.CurrentLevel)
-                        SceneManager.LoadScene("game");
-                    else SceneManager.LoadScene("map");
+                    /*if(gameSettings.afterLevel >= GameManager.Instance._mapProgressManager.CurrentLevel)
+                        SceneManager.LoadScene("game");*/
+                    /*else*/
+                    SceneManager.LoadScene("map");
                     break;
             }
         }

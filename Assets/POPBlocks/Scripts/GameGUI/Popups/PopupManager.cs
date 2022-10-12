@@ -27,7 +27,7 @@ namespace POPBlocks.Scripts.Popups
         public Popup coins_shop;
         public Popup exit;
         public Popup info;
-        public Popup leadboard_menu;
+        //public Popup leadboard_menu;
         public Popup life_shop;
         public Popup outOfMoves;
         public Popup play1;

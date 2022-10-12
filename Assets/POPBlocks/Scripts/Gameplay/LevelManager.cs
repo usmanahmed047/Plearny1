@@ -15,6 +15,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using AdmobAds;
 using DG.Tweening;
 using POPBlocks.Scripts.Boosts;
 using POPBlocks.Scripts.Effects;
@@ -301,6 +302,7 @@ namespace POPBlocks.Scripts
                 levelNum = GameManager.Instance.restartedLevel;
                 GameManager.Instance.restartedLevel = 0;
             }
+            AdsManager.Instance.ShowBannerAd(false);
             bool dontLoadLevel = false;
 #if UNITY_GAME_SIMULATION && SIMULATION_ENABLED
             dontLoadLevel = true;
