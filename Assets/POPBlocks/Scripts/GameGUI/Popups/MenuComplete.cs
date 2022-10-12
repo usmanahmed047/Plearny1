@@ -13,6 +13,7 @@
 
 using System.Collections;
 using System.Linq;
+using AdmobAds;
 using POPBlocks.Scripts.Scriptables;
 #if EPSILON || PLAYFAB
 using POPBlocks.Server.Network;
@@ -60,6 +61,7 @@ namespace POPBlocks.Scripts.Popups
             #if EPSILON
             NetworkManager.dataManager.DownloadPlayerData();
             #endif
+
         }
 
         private IEnumerator ShowStars()
@@ -70,7 +72,9 @@ namespace POPBlocks.Scripts.Popups
                 yield return new WaitForSeconds(0.5f);
                 stars[i].SetActive(true);
             }
-
+            yield return new WaitForSeconds(1f);
+            AdsManager.Instance.RequestAndLoadRewardedAd();
+            AdsManager.Instance.ShowRewardedAd();
             // if(starsAmount == 3) Invoke(nameof(AnimateCharacter), 1);
         }
 

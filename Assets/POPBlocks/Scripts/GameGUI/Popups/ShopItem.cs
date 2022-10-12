@@ -15,9 +15,6 @@ using System;
 using POPBlocks.Scripts.GameGUI;
 using POPBlocks.Scripts.GUI;
 using TMPro;
-#if UNITY_INAPP
-using POPBlocks.Scripts.Integrations;
-#endif
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,18 +28,11 @@ namespace POPBlocks.Scripts.Popups
 
         public void Buy()
         {
-#if UNITY_INAPP
-            UnityInAppsIntegration.THIS.BuyProductID(productID);
-            SoundBase.Instance.PlayOneShot(SoundBase.Instance.cash);
-#endif
         }
 
         private void Update()
         {
-            #if UNITY_INAPP
-            if (UnityInAppsIntegration.THIS.m_StoreController.products.WithID(productID).metadata.localizedPrice > new decimal(0.01))
-                prices.text = "" + UnityInAppsIntegration.THIS.m_StoreController.products.WithID(productID).metadata.localizedPriceString;
-            #endif
+            
         }
     }
 }
