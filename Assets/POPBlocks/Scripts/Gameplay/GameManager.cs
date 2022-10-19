@@ -26,6 +26,7 @@ using POPBlocks.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace POPBlocks.Scripts
 {
@@ -38,8 +39,8 @@ namespace POPBlocks.Scripts
         public GUICounter coins;
         //lives GUI element
         public GUICounter lives;
-        //Cash Reward 
-        public int cash;
+        //CashText
+        public TMP_Text cashTxt;
         //instance
         public static GameManager Instance;
         //boosts using in main scene and game scene
@@ -240,6 +241,7 @@ namespace POPBlocks.Scripts
         {
             return GameManager.Instance.lives.GetValue() == gameSettings.CapOfLife;
         }
+       
 
     }
 }

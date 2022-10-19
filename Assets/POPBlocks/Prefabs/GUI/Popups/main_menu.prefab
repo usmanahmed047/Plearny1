@@ -4361,6 +4361,7 @@ MonoBehaviour:
   animator: {fileID: 95651828158243454}
   noFade: 1
   backButton: {fileID: 0}
+  cashTxt: {fileID: 0}
 --- !u!1 &4846482313093649080
 GameObject:
   m_ObjectHideFlags: 0

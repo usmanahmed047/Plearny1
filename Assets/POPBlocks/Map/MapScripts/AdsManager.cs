@@ -58,11 +58,11 @@ namespace AdmobAds
             List<String> deviceIds = new List<String>() { AdRequest.TestDeviceSimulator };
 
             // Add some test device IDs (replace with your own device IDs).
-        #if UNITY_IPHONE
+#if UNITY_IPHONE
             deviceIds.Add("96e23e80653bb28980d3f40beb58915c");
-        #elif UNITY_ANDROID
+#elif UNITY_ANDROID
             deviceIds.Add("75EF8D155528C04DACBBA6F36F433035");
-        #endif
+#endif
 
             // Configure TagForChildDirectedTreatment and test device IDs.
             RequestConfiguration requestConfiguration =
@@ -104,11 +104,6 @@ namespace AdmobAds
             AndroidJavaObject contentResolver = currentActivity.Call<AndroidJavaObject>("getContentResolver");
             AndroidJavaClass secure = new AndroidJavaClass("android.provider.Settings$Secure");
             string android_id = secure.CallStatic<string>("getString", contentResolver, "android_id");
-        }
-
-        private void Update()
-        {
-            print("loaded " + rewardedAd.IsLoaded());
         }
 
         #endregion
@@ -258,6 +253,8 @@ namespace AdmobAds
             {
                 PrintStatus("Interstitial ad closed.");
                 RequestAndLoadInterstitialAd();
+                if(AdsCounter.Instance.timerAd)
+                    AdsCounter.Instance.InitializeAdsResetTime();
                 OnAdClosedEvent.Invoke();
             };
             interstitialAd.OnAdDidRecordImpression += (sender, args) =>
@@ -300,6 +297,12 @@ namespace AdmobAds
                 interstitialAd.Destroy();
             }
         }
+
+        public bool isInterstitialLoaded()
+        {
+            return interstitialAd != null && interstitialAd.IsLoaded();
+        }
+
 
         #endregion
 
@@ -346,13 +349,16 @@ namespace AdmobAds
             {
                 PrintStatus("Reward ad closed.");
                 RequestAndLoadRewardedAd();
+                if (AdsCounter.Instance.timerAd)
+                    AdsCounter.Instance.InitializeAdsResetTime();
                 OnAdClosedEvent.Invoke();
             };
             rewardedAd.OnUserEarnedReward += (sender, args) =>
             {
                 PrintStatus("User earned Reward ad reward: " + args.Amount);
                 RequestAndLoadRewardedAd();
-                GrantRewardToPlayer();
+                if(!AdsCounter.Instance.isIdle)
+                    GrantRewardToPlayer();
                 OnUserEarnedRewardEvent.Invoke();
             };
             rewardedAd.OnAdDidRecordImpression += (sender, args) =>
@@ -460,6 +466,11 @@ namespace AdmobAds
             {
                 PrintStatus("Rewarded Interstitial ad is not ready yet.");
             }
+        }
+
+        public bool isRewardVideoLoaded()
+        {
+            return rewardedAd != null && rewardedAd.IsLoaded();
         }
 
         #endregion
@@ -619,7 +630,10 @@ namespace AdmobAds
         {
             // Reward Granted
             PrintStatus("Reward Granted");
-            
+            PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash", 0) + 5);
+            if (AdsCounter.Instance.timerAd)
+                AdsCounter.Instance.InitializeAdsResetTime();
+
         }
 
 

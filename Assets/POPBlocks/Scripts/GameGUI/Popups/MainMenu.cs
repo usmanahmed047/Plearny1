@@ -12,7 +12,9 @@
 // // THE SOFTWARE.
 
 using AdmobAds;
+using GameCurrency;
 using POPBlocks.Scripts.Scriptables;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +25,7 @@ namespace POPBlocks.Scripts.Popups
         private void Start()
         {
             AdsManager.Instance.ShowBannerAd(true);
+            UpdateCashText();
         }
 
         public void StartGame()
@@ -46,6 +49,10 @@ namespace POPBlocks.Scripts.Popups
                     SceneManager.LoadScene("map");
                     break;
             }
+        }
+        public void UpdateCashText()
+        {
+            FindObjectOfType<CashText>().GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("Cash").ToString();
         }
     }
 }
